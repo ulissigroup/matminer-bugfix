@@ -55,6 +55,8 @@ class ConversionFeaturizer(BaseFeaturizer):
     def __init__(self, target_col_id, overwrite_data):
         self._target_col_id = target_col_id
         self._overwrite_data = overwrite_data
+        self.target_col_id = target_col_id
+        self.overwrite_data = overwrite_data
 
     def featurize_dataframe(self, df, col_id, **kwargs):
         """Perform the data conversion and set the target column dynamically.
